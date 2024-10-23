@@ -15,4 +15,7 @@ inputs:
     required: true
 runs:
   using: "node20"
+  pre:
+    - name: "Install dependencies"
+      run: npm install googleapis
   main: "index.js"
