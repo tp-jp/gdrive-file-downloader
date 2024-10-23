@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download files from Google Drive
-        uses: <your-username>/gdrive-file-downloader@main
+        uses: tp-jp/gdrive-file-downloader@main
         with:
           google_client_id: ${{ secrets.GOOGLE_CLIENT_ID }}
           google_client_secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
