@@ -14,9 +14,8 @@ inputs:
     description: "JSON string containing file IDs and names"
     required: true
 runs:
-  using: "node12"
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.google-client-id }}
     - ${{ inputs.google-client-secret }}
