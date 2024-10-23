@@ -1,0 +1,18 @@
+name: "Download Images from Google Drive"
+description: "Downloads images from Google Drive using provided credentials."
+inputs:
+  google_client_id:
+    description: "Google Client ID"
+    required: true
+  google_client_secret:
+    description: "Google Client Secret"
+    required: true
+  google_refresh_token:
+    description: "Google Refresh Token"
+    required: true
+  file_ids:
+    description: "JSON string containing file IDs and names"
+    required: true
+runs:
+  using: "node20"
+  main: "dist/index.js"
