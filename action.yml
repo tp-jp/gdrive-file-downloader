@@ -14,10 +14,7 @@ inputs:
     description: "JSON string containing file IDs and names"
     required: true
 runs:
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - ${{ inputs.google-client-id }}
-    - ${{ inputs.google-client-secret }}
-    - ${{ inputs.google-refresh-token }}
-    - ${{ inputs.file_ids }}
+  using: "node16"
+  steps:
+    - run: npm install
+    - run: node index.js

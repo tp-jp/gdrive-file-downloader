@@ -1,10 +1,11 @@
+const core = require('@actions/core');
 const { google } = require('googleapis');
 const fs = require('fs');
 
-const clientId = process.argv[2];
-const clientSecret = process.argv[3];
-const refreshToken = process.argv[4];
-const fileIds = JSON.parse(process.argv[5]);
+const clientId = core.getInput('google_client_id');
+const clientSecret = core.getInput('google_client_secret');
+const refreshToken = core.getInput('google_refresh_token');
+const fileIds = JSON.parse(core.getInput('file_ids'));
 
 const oauth2Client = new google.auth.OAuth2(clientId, clientSecret);
 oauth2Client.setCredentials({ refresh_token: refreshToken });

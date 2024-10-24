@@ -4,6 +4,7 @@
     "description": "Download files from Google Drive using Google API",
     "main": "index.js",
     "dependencies": {
-        "googleapis": "^105.0.0"
+        "googleapis": "^105.0.0",
+        "@actions/core": "^1.10.0"
     }
 }
