@@ -17,4 +17,6 @@ runs:
   using: "node16"
   steps:
     - run: npm install
+      shell: bash
     - run: node index.js
+      shell: bash
